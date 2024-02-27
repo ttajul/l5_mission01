@@ -12,6 +12,12 @@ export function calculateRiskRating(req: Request, res: Response) {
     // define the keyword list
     const keywords: string[] = ['collide', 'crash', 'scratch', 'bump', 'smash'];
 
-    
+    // calculate the risk rating based on the occurrence of keywords
+    let risk_rating: number = 1; //default risk rating
+    for (const keyword of keywords) {
+        const occurrences = (claim_history.match(new RegExp(keyword, 'gi'))
+        || []).length;
+        risk_rating += occurrences
+    }
 }
 
