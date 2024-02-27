@@ -19,5 +19,8 @@ export function calculateRiskRating(req: Request, res: Response) {
         || []).length;
         risk_rating += occurrences
     }
+
+    // send res with the calculated  risk rating
+    res.json({risk_rating: Math.min(risk_rating, 5)}); // cap risk rating to 5
 }
 
