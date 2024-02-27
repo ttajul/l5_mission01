@@ -8,5 +8,10 @@ export function calculateRiskRating(req: Request, res: Response) {
         return res.status(400).json({error: 'Invalid input. Claim history must be provided as string'
     });
     }
+
+    // define the keyword list
+    const keywords: string[] = ['collide', 'crash', 'scratch', 'bump', 'smash'];
+
+    
 }
 
