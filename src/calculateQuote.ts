@@ -21,6 +21,9 @@ export function calculateQuote(req: Request, res: Response) {
 
         //calculate monthly premium 
         const monthlyPremium: number = yearlyPremium /12;
+
+        //send the response with the calculated premiums
+        return res.json({monthly_premium: monthlyPremium, yearly_premium: yearlyPremium});
         
 
     } catch (error) {
