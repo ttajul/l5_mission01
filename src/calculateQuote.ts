@@ -16,6 +16,11 @@ export function calculateQuote(req: Request, res: Response) {
         const parsedCarValue: number = Number(car_value);
         const parsedRiskRating: number = Number(risk_rating);
 
+        // calculate yearly premium
+        const yearlyPremium: number = parsedCarValue * parsedRiskRating / 100;
+
+        //calculate monthly premium 
+        const monthlyPremium: number = yearlyPremium /12;
         
 
     } catch (error) {
