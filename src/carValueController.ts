@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 
-//temporary storage for calculated car value
-let carValue: number | undefined;
+
 
 export function calculateCarValue(req: Request, res: Response) {
     try {

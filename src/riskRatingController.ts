@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 
-//temporary storage for calculated risk rating
-let risk_rating: number | undefined; 
+
 
 export function calculateRiskRating(req: Request, res: Response) {
     const {claim_history} = req.body;
