@@ -20,11 +20,12 @@ export function calculateQuote(req: Request, res: Response) {
         const yearlyPremium: number = parsedCarValue * parsedRiskRating / 100;
 
         //calculate monthly premium 
-        const monthlyPremium: number = yearlyPremium /12;
+        const monthlyPremium: number = parseFloat((yearlyPremium / 12).toFixed(1));
+
 
         //send the response with the calculated premiums
         return res.json({monthly_premium: monthlyPremium, yearly_premium: yearlyPremium});
-        
+
 
     } catch (error) {
         res.status(500).json({error: 'An error occur when processing the request'})
