@@ -12,6 +12,12 @@ export function calculateQuote(req: Request, res: Response) {
             return res.status(400).json({error: 'Invalid input. car value and risk rating must be number'})
         }
 
+        // convert car_value and risk_rating to numbers
+        const parsedCarValue: number = Number(car_value);
+        const parsedRiskRating: number = Number(risk_rating);
+
+        
+
     } catch (error) {
         res.status(500).json({error: 'An error occur when processing the request'})
     }
