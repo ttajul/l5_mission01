@@ -20,7 +20,7 @@ export function calculateQuote(req: Request, res: Response) {
         const yearlyPremium: number = parsedCarValue * parsedRiskRating / 100;
 
         //calculate monthly premium 
-        const monthlyPremium: number = parseFloat((yearlyPremium / 12).toFixed(1));
+        const monthlyPremium: number = parseFloat((yearlyPremium / 12).toFixed(2));
 
 
         //send the response with the calculated premiums
