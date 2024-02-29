@@ -17,6 +17,8 @@ export function calculateCarValue(req: Request, res: Response) {
         }
         carValue = (carValue * 100) + year;
 
+        
+
         return res.json({ car_value: carValue });
     } catch (error) {
         return res.status(500).json({ error: 'An error occurred while processing the request' });

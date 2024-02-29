@@ -1,6 +1,5 @@
 import { Request,  Response } from "express";
-import { calculateCarValue } from "./carValueController";
-import { calculateRiskRating } from "./riskRatingController";
+
 
 export function calculateQuote(req: Request, res: Response) {
     try {
